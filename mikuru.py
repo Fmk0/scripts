@@ -195,7 +195,7 @@ def main():
     stage_4()
 
     print "\nStage 3 & 4 are using DotWall protector for obfuscating .NET Payloads"
-    print "Please use Dot4net and Dotwall Unpacker tools on github for digging more into them"
+    print "Please use De4dot and Dotwall Unpacker tools on github for digging more into them"
     print "Happy Hunting o/"
 
 if __name__ == "__main__":
