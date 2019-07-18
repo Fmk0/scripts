@@ -3,7 +3,7 @@
     Steganography / PE Analyzer Tool
 '''
 
-_VER_ = "0.1"
+_VER_ = "0.2"
 
 import os
 import sys
@@ -16,8 +16,8 @@ def ran(i):
 
 def hex2rgb(h):
     h = h.decode()
-    if len(h) % 3 != 0:
-        h += "00"* h
+    while len(h) % 3 != 0:
+        h += "00"
     return tuple(int(h[i:i+2],16) for i in (0,2,4))
 
 def generate(payload):
@@ -59,6 +59,8 @@ def extract(fake_png):
 
     with open('payload_unpacked.exe','wb') as myBlob:
          myBlob.write(bytes(payload))
+
+    print('Payload extracted !\n')
 
 def logo():
     print('   _____ __    _ _            ')
